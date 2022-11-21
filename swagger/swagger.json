@@ -1,0 +1,107 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "beego Test API",
+        "description": "beego has a very cool tools to autogenerate documents for your API\n",
+        "version": "1.0.0",
+        "termsOfService": "http://beego.me/",
+        "contact": {
+            "email": "astaxie@gmail.com"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        }
+    },
+    "paths": null,
+    "definitions": {
+        "context.Context": {
+            "title": "Context",
+            "type": "object"
+        },
+        "proto.LoginUser": {
+            "title": "LoginUser",
+            "type": "object",
+            "properties": {
+                "sizeCache": {
+                    "$ref": "#/definitions/protoimpl.SizeCache"
+                },
+                "state": {
+                    "$ref": "#/definitions/protoimpl.MessageState"
+                },
+                "uid": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "unknownFields": {
+                    "$ref": "#/definitions/protoimpl.UnknownFields"
+                },
+                "username": {
+                    "type": "string"
+                }
+            }
+        },
+        "proto.RequestLoginDo": {
+            "title": "RequestLoginDo",
+            "type": "object",
+            "properties": {
+                "mobile": {
+                    "type": "string"
+                },
+                "password": {
+                    "type": "string"
+                },
+                "sizeCache": {
+                    "$ref": "#/definitions/protoimpl.SizeCache"
+                },
+                "state": {
+                    "$ref": "#/definitions/protoimpl.MessageState"
+                },
+                "unknownFields": {
+                    "$ref": "#/definitions/protoimpl.UnknownFields"
+                }
+            }
+        },
+        "proto.ResponseLoginDo": {
+            "title": "ResponseLoginDo",
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "count": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "items": {
+                    "$ref": "#/definitions/proto.LoginUser"
+                },
+                "msg": {
+                    "type": "string"
+                },
+                "sizeCache": {
+                    "$ref": "#/definitions/protoimpl.SizeCache"
+                },
+                "state": {
+                    "$ref": "#/definitions/protoimpl.MessageState"
+                },
+                "unknownFields": {
+                    "$ref": "#/definitions/protoimpl.UnknownFields"
+                }
+            }
+        },
+        "protoimpl.MessageState": {
+            "title": "MessageState",
+            "type": "object"
+        },
+        "protoimpl.SizeCache": {
+            "title": "SizeCache",
+            "type": "object"
+        },
+        "protoimpl.UnknownFields": {
+            "title": "UnknownFields",
+            "type": "object"
+        }
+    }
+}
